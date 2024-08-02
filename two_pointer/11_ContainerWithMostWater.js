@@ -1,6 +1,8 @@
 /**
  * @param {number[]} height
  * @return {number}
+ * TC: O(n)
+ * SC: O(1)
  */
 var maxArea = function(height) {
     let l = 0;

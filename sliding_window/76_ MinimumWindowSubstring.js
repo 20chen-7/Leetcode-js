@@ -19,7 +19,7 @@ function isCovered(cntS, cntT){
  */
 var minWindow = function(s, t) {
     const m = s.length;
-    let ansL = -1, ansR = 0;
+    let ansL = -1, ansR = m;
     let l = 0, less = 0;
     const cntS = new Array(128).fill(0);
     const cntT = new Array(128).fill(0);
