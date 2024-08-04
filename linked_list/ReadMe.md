@@ -22,3 +22,16 @@
             return newHead;
             };
         ```
+- [LC876](https://leetcode.cn/problems/middle-of-the-linked-list/)
+- middle point LinkedList
+    - ``` javascript
+        //iterative
+        var middleNode = function(head) {
+            let fast = head, slow = head;
+            while(fast&&fast.next){
+                fast = fast.next.next;
+                slow = slow.next;
+            }
+            return slow;
+         };
+        ```

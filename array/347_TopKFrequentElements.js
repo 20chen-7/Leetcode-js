@@ -1,3 +1,4 @@
+const { MinPriorityQueue } = require('@datastructures-js/priority-queue');
 /**
  * 
  * @param {number[]} nums 
@@ -93,3 +94,22 @@ var topFrequent2 = function(nums, k){
     }
     return res;
 }
+
+var topKFrequent3 = function(nums, k) {
+    let map = new Map();
+    nums.map((x) => {
+        map.set(x, (map.get(x)||0)+1);
+    })
+    const pq = new MinPriorityQueue({priority:e=>e.frequency});
+    map.forEach((frequency, num) => {
+        pq.enqueue({ num, frequency });
+        if (pq.size() > k) {
+        pq.dequeue();
+        }
+    });
+    const res = [];
+    while (!pq.isEmpty()) {
+        res.push(pq.dequeue().element.num);
+      }
+    return res;
+};
