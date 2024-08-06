@@ -12,6 +12,7 @@
  * @param {TreeNode} q
  * @return {TreeNode}
  */
+/** No need to conside null, BST */
 var lowestCommonAncestor = function(root, p, q) {
     const x = root.val;
     if(x<p.val&&x<q.val){

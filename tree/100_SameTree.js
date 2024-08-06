@@ -10,6 +10,7 @@
  * @param {TreeNode} p
  * @param {TreeNode} q
  * @return {boolean}
+ * TC: O(min(m,n)), SC: O(min(m,n))
  */
 var isSameTree = function(p, q) {
     if(p===null&&q===null)return true;
