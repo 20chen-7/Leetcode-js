@@ -41,6 +41,7 @@ var buildTree2 = function(preorder, inorder) {
     return new TreeNode(preorder[0], left, right);
     
 };
+/**TC:O(n), SC:O(n) */
 
 var buildTree3 = function(preorder, inorder) {
     const n = preorder.length;
